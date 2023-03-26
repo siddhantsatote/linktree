@@ -4,22 +4,28 @@
     box-sizing: border-box;
     font-family:Arial, Helvetica, sans-serif;
 }
-
-body{
+.container{
     display: flex;
+    width:100%;
     justify-content: center;
-    align-items: center;
     min-height: 100vh;
     background: #434750;
 }
-
-ul{
-    position: relative;
-    transform: skewY(-15deg);
-   
+.box{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    min-height: 100vh;
+    background: #434750;
+    padding-right: 17rem;
 }
 
-ul li{
+.ul{
+    position: relative;
+    transform: skewY(-15deg);
+}
+
+.ul .li{
     position: relative;
     list-style: none;
     width:200px;
@@ -29,11 +35,11 @@ ul li{
     transition: 0.5s;
 }
 
-ul li:hover{
+.ul .li:hover{
 background: #33a3ee;
 transform: translateX(50px);
 }
-ul li::before{
+.ul .li::before{
     content: '';
     position: absolute;
     top:0;
@@ -45,10 +51,10 @@ ul li::before{
     transform: skewY(45deg);
     transition: 0.5s;
 }
-ul li:hover::before{
+.ul .li:hover::before{
 background: #1f5378;
 }
-ul li::after{
+.ul .li::after{
     content: '';
     position: absolute;
     top:-40px;
@@ -60,11 +66,12 @@ ul li::after{
     transform: skewX(45deg);
     transition: 0.5s;
 }
-ul li:hover::after{
+.ul .li:hover::after{
     background:#2982b9 ;
+    
 }
 
-ul li a{
+.ul .li .a{
     text-decoration: none;
     color:#999;
     display:block;
@@ -73,12 +80,60 @@ ul li a{
     transition:0.5;
 }
 
-ul li:hover a{
+.ul .li:hover .a{
     color: #fff;
 
 
 }
 
-ul li:last-child::after{
+.ul .li:last-child::after{
 box-shadow: -120px 120px 20px rgba(0,0,0,0.25);
+}
+
+.brand{
+    text-align: center;
+    padding-top: 20rem;
+    position: relative;
+    
+}
+
+.h1{
+    font-weight: 550;
+    background-color: #ff8c3b;
+    width: 300px;
+    border-radius:40px;
+    border:none;
+    display: inline-block;
+    color: #f7ce55;
+    position: relative;
+    font-size: 80px;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 0 10px #ff8c3b,
+    0 0 40px #ff8c3b,
+    0 0 80px #ff8c3b,
+    0 0 160px #ff8c3b,
+    0 0 240px #ff8c3b;
+
+}
+
+.h1:hover{
+    transform: translateX(50px);
+    color:#f5b1f9;
+    background-color: #df4ae7;
+    box-shadow: 0 0 10px #df4ae7,
+    0 0 40px #df4ae7,
+    0 0 80px #df4ae7,
+    0 0 160px #df4ae7,
+    0 0 240px #df4ae7;
+}
+
+.h1:active{
+    opacity: 0.5;
+    color:#f5b1f9;
+    transition: 0.5s;
+    background-color: #df4ae7;
+    box-shadow: 0 0 10px  #df4ae7 ,
+    0 0 40px  #df4ae7,
+    0 0 80px  #df4ae7,
 }
